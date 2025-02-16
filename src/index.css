@@ -82,3 +82,24 @@
     padding-inline: 2rem;
   }
 }
+
+@keyframes float {
+  0%,
+  100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(1.02);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-float-delay {
+  animation: float 6s ease-in-out infinite;
+  animation-delay: 3s;
+}

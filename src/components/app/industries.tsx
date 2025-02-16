@@ -4,16 +4,16 @@ import { SectionTag } from "./section-tag";
 
 export function Industries() {
   return (
-    <div className="relative overflow-hidden font-oxanium py-14 border-b border-brand-gray-500/50 border">
+    <div className="relative overflow-hidden font-oxanium py-14">
       <img
         src="industry-elipse.png"
         alt="no-img"
-        className="absolute top-0 -right-44 max-w-96 opacity-30"
+        className="absolute top-0 -right-44 max-w-96 opacity-30 animate-float"
       />
       <img
         src="industry-elipse.png"
         alt="no-img"
-        className="absolute -bottom-5 -left-44 max-w-96 opacity-30"
+        className="absolute -bottom-5 -left-44 max-w-96 opacity-30 animate-float-delay"
       />
 
       <div className="flex flex-col gap-5 container relative">

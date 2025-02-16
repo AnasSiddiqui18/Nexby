@@ -13,7 +13,7 @@ import { Superior } from "./components/app/superior";
 
 function App() {
   return (
-    <div className="bg-dark-100 min-h-screen">
+    <div className="bg-dark-100 min-h-screen pt-5">
       <Header />
       <Hero />
       <Register />

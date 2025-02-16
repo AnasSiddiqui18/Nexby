@@ -59,7 +59,7 @@ export function Pricing() {
                     </div>
                   </div>
 
-                  <Button className="w-full bg-brand-purple-300 hover:bg-brand-purple-200 text-white py-3 border-2 border-brand-purple-100 rounded-md sm:w-full">
+                  <Button className="w-full bg-brand-purple-100 hover:bg-brand-purple-200 text-white h-10 py-2 border-2 border-brand-purple-600 text-md rounded-none">
                     Get Started
                   </Button>
                 </div>
@@ -85,7 +85,7 @@ export function Pricing() {
                 {selectedPlan === "Basic" && data.plan === selectedPlan ? (
                   <div className="flex justify-center overflow-x-auto max-w-full">
                     <table className="w-full max-w-4xl">
-                      <thead className="h-14 bg-dark-200">
+                      <thead className="h-14 bg-dark-300 font-normal">
                         <tr>
                           <th className="py-2 px-4 border border-brand-gray-300 whitespace-nowrap">
                             Features
@@ -191,17 +191,17 @@ export function Pricing() {
 
       {/* table for desktop view (basic + pro plan) */}
 
-      <div className="flex justify-center mt-10 max-sm:hidden">
-        <table className="w-full max-w-4xl">
-          <thead className="h-14 bg-dark-200">
+      <div className="flex justify-center mt-10 max-sm:hidden w-full">
+        <table className="w-full max-w-4xl rounded-lg overflow-hidden">
+          <thead className="h-14 bg-dark-300">
             <tr>
-              <th className="py-2 px-4 border border-brand-gray-300">
+              <th className="py-2 px-4 border border-brand-gray-300 font-normal">
                 Features
               </th>
-              <th className="py-2 px-4 border border-brand-gray-300">
+              <th className="py-2 px-4 border border-brand-gray-300 font-normal">
                 Basic Plan
               </th>
-              <th className="py-2 px-4 border border-brand-gray-300">
+              <th className="py-2 px-4 border border-brand-gray-300 font-normal">
                 Pro Plan
               </th>
             </tr>
@@ -212,10 +212,10 @@ export function Pricing() {
               const { basic, isImage, pro } = content;
               return (
                 <tr key={data.features} className="text-center">
-                  <td className="py-4 px-6 border border-brand-gray-300">
+                  <td className="py-4 px-6 border border-brand-gray-300 rounded-lg bg-dark-600">
                     {features}
                   </td>
-                  <td className="border border-brand-gray-300">
+                  <td className="border border-brand-gray-300 bg-dark-600">
                     {isImage ? (
                       <img
                         src={basic}
@@ -226,7 +226,7 @@ export function Pricing() {
                       basic
                     )}
                   </td>
-                  <td className="border border-brand-gray-300">
+                  <td className="border border-brand-gray-300 bg-dark-600">
                     {isImage ? (
                       <img src={pro} alt="no-img" className="mx-auto size-6" />
                     ) : (
@@ -242,12 +242,12 @@ export function Pricing() {
             <tr>
               <th></th>
               <th>
-                <Button className="bg-brand-purple-300 hover:bg-brand-purple-100 text-white py-3 rounded-none w-full">
+                <Button className="w-full bg-brand-purple-100 hover:bg-brand-purple-200 text-white h-10 py-2 border-2 border-brand-purple-600 text-md rounded-none">
                   Get Started
                 </Button>
               </th>
               <th>
-                <Button className="bg-brand-purple-300 hover:bg-brand-purple-100 text-white py-3 rounded-none w-full">
+                <Button className="w-full bg-brand-purple-100 hover:bg-brand-purple-200 text-white h-10 py-2 border-2 border-brand-purple-600 text-md rounded-none">
                   Get Started
                 </Button>
               </th>

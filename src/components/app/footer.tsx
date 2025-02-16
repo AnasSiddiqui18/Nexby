@@ -3,7 +3,7 @@ import { Button } from "../ui/button";
 
 export function Footer() {
   return (
-    <div className="text-primary bg-brand-purple-300 py-10 h-auto font-oxanium flex flex-col justify-center">
+    <div className="text-primary bg-brand-purple-700 pt-10 pb-5 h-auto font-oxanium flex flex-col justify-center">
       <div className="container">
         <div className="flex justify-between w-full max-md:flex-col items-center">
           <div className="space-y-2 max-md:flex max-md:flex-col max-md:items-center max-md:text-center">
@@ -34,12 +34,12 @@ export function Footer() {
         </div>
 
         <div className="flex flex-col gap-3 max-md:items-center max-md:text-center">
-          <div className="flex flex-col md:flex-row gap-3 mt-5">
+          <div className="flex flex-col md:flex-row gap-5 mt-5">
             {footer_links.map((data) => {
               return (
                 <span
                   key={data}
-                  className="text-primary hover:text-primary cursor-pointer text-gray-300"
+                  className="text-primary hover:text-primary cursor-pointer text-brand-gray-100"
                 >
                   {data}
                 </span>
@@ -47,19 +47,16 @@ export function Footer() {
             })}
           </div>
 
-          <div className="h-[1px] w-full bg-brand-white-200 hidden md:block" />
+          <div className="h-[1px] w-full bg-brand-gray-100/50 hidden md:block" />
         </div>
 
         <div className="flex gap-3 md:justify-between max-md:flex-col items-center mt-5">
-          <div className="flex flex-col gap-3">
+          <div className="flex gap-3">
             <span className="text-primary text-gray-200">
               {`© ${new Date().getFullYear()} Nexby. All rights reserved.`}
             </span>
-
-            <div className="flex gap-2">
-              <span className="text-primary">Privacy Policy</span>
-              <span className="text-primary">Terms of Service</span>
-            </div>
+            <span className="text-primary">Privacy Policy</span>
+            <span className="text-primary">Terms of Service</span>
           </div>
 
           <div className="flex gap-5">
