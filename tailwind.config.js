@@ -1,5 +1,5 @@
 import animate from "tailwindcss-animate";
-import fluid, { extract, screens } from "fluid-tailwind";
+import fluid, { extract, screens, fontSize } from "fluid-tailwind";
 
 /** @type {import('tailwindcss').Config} */
 export default {
@@ -124,8 +124,8 @@ export default {
         "accordion-up": "accordion-up 0.2s ease-out",
       },
     },
-    // Extend screens with custom breakpoints
     screens,
+    fontSize,
   },
   plugins: [animate, fluid],
 };
