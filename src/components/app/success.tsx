@@ -6,6 +6,8 @@ import { Button } from "../ui/button";
 import useEmblaCarousel from "embla-carousel-react";
 import Fade from "embla-carousel-fade";
 import { useCallback, useEffect, useState } from "react";
+import { AnimatePresence, motion } from "motion/react";
+
 import "../app/embla-carousel/embla.css";
 
 const images = [
@@ -25,6 +27,7 @@ export function Success() {
     },
     [Fade()]
   );
+  const [startIndex, setStartIndex] = useState(0);
 
   const onSelect = useCallback(() => {
     if (!emblaApi) return;
@@ -33,19 +36,27 @@ export function Success() {
   }, [emblaApi]);
 
   useEffect(() => {
+    const interval = setInterval(() => {
+      setStartIndex((prevIndex) => (prevIndex + 1) % reviewData.length);
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  useEffect(() => {
     if (!emblaApi) return;
 
     emblaApi.on("select", onSelect);
-
     const autoPlay = setInterval(() => {
       emblaApi.scrollNext();
     }, 5000);
-
     return () => {
       emblaApi.off("select", onSelect);
       clearInterval(autoPlay);
     };
   }, [emblaApi, onSelect]);
+
+  const currentReviews = reviewData.slice(startIndex, startIndex + 3);
 
   return (
     <div className="h-auto bg-[url('success-bg.png')] py-10 bg-cover text-primary font-oxanium">
@@ -53,7 +64,7 @@ export function Success() {
         <div>
           <SectionTag content="Our Success Stories" />
         </div>
-        <div className="flex max-md:flex-col justify-center mt-12 items-stretch max-md:h-[700px] h-[500px] gap-6">
+        <div className="flex max-md:flex-col justify-center mt-12 items-stretch max-md:h-[700px] h-[500px] gap-4">
           <div className="relative flex justify-center items-center h-full w-full embla rounded-lg overflow-hidden">
             <div className="embla__viewport w-full h-full" ref={emblaRef}>
               <div className="embla__container h-full">
@@ -81,28 +92,36 @@ export function Success() {
             </p>
           </div>
 
-          <div className="flex flex-col gap-4 h-full overflow-y-auto w-full">
-            {reviewData.map((data, index) => (
-              <div
-                key={index}
-                className="bg-brand-gray-600 text-brand-gray-800 rounded-md flex flex-col gap-4 p-4 w-full"
-              >
-                <p className="~text-sm/base !leading-relaxed">{data.review}</p>
-                <div className="flex justify-between text-primary ~text-sm/xl">
-                  <div className="flex gap-1">
-                    {Array.from({ length: data.star }).map((_, starIndex) => (
-                      <img
-                        key={starIndex}
-                        src="review-star.png"
-                        alt="no-img"
-                        className="size-4"
-                      />
-                    ))}
+          <div className="flex flex-col gap-4 h-full overflow-hidden w-full">
+            <AnimatePresence mode="popLayout">
+              {currentReviews.map((data, index) => (
+                <motion.div
+                  key={startIndex + index}
+                  initial={{ opacity: 0, y: 50 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -50 }}
+                  transition={{ duration: 0.5, ease: "easeInOut" }}
+                  className="bg-brand-gray-600 text-brand-gray-800 rounded-md flex justify-between flex-col gap-4 p-4 w-full h-44"
+                >
+                  <p className="~text-sm/base !leading-relaxed">
+                    {data.review}
+                  </p>
+                  <div className="flex justify-between text-primary ~text-sm/base">
+                    <div className="flex gap-1">
+                      {Array.from({ length: data.star }).map((_, starIndex) => (
+                        <img
+                          key={starIndex}
+                          src="review-star.png"
+                          alt="no-img"
+                          className="size-4"
+                        />
+                      ))}
+                    </div>
+                    - {data.author}
                   </div>
-                  - {data.author}
-                </div>
-              </div>
-            ))}
+                </motion.div>
+              ))}
+            </AnimatePresence>
           </div>
         </div>
 

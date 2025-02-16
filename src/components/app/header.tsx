@@ -17,7 +17,7 @@ export function Header() {
   }, [open]);
 
   return (
-    <div className="bg-dark-200 font-oxanium container rounded-md relative">
+    <div className="bg-dark-500 font-oxanium container rounded-md relative">
       <div className="h-20 text-brand-gray-100 flex justify-between items-center">
         <div
           className="flex justify-between w-full lg:w-fit items-center cursor-pointer"
@@ -43,16 +43,16 @@ export function Header() {
           ))}
         </div>
 
-        <div className="flex gap-2 max-lg:hidden">
+        <div className="flex gap-2 max-lg:hidden text-brand-white-100">
           <Button
             variant="ghost"
-            className="bg-transparent border-2 border-primary rounded-none hover:bg-primary hover:text-black transition-colors duration-200"
+            className="bg-transparent border-2 border-primary font-semibold rounded-none hover:bg-primary hover:text-black transition-colors duration-200"
           >
             Sign Up
           </Button>
           <Button
             variant="secondary"
-            className="bg-primary border-2 border-primary rounded-none text-black hover:bg-primary-dark transition-colors duration-200"
+            className="bg-primary border-2 border-primary font-semibold rounded-none text-black hover:bg-primary-dark transition-colors duration-200"
           >
             Login
           </Button>

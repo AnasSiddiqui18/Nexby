@@ -56,7 +56,7 @@ export function Register() {
             </div>
 
             <div className="flex gap-4">
-              <Button className="bg-brand-purple-300 hover:bg-brand-purple-200 text-white py-3 border-2 border-brand-purple-100 rounded-md sm:w-full">
+              <Button className="bg-brand-purple-100 hover:bg-brand-purple-200 text-white h-12 border-2 border-brand-purple-100 text-xl rounded-sm">
                 Get A Call Back
               </Button>
             </div>

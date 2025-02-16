@@ -138,7 +138,7 @@ export const sectionData = [
     heading: "Job Posting",
     para: "Let Hire Pro generate the perfect job description tailored to your needs, and then post it across leading job boards to engage top talent.",
     step: "Step 1",
-    star_position: "bottom-0 left-0 size-12 blur-sm",
+    star_position: "right-28 -top-10 size-12",
     src: "job-posting-img.png",
     className: "",
   },
@@ -146,7 +146,7 @@ export const sectionData = [
     heading: "Resume Screening",
     para: "Our AI-powered system scans and ranks resumes automatically, shortlisting candidates who best match your criteria and rejecting those who don’t.",
     step: "Step 2",
-    star_position: "bottom-0 right-0 size-20",
+    star_position: "top-0 left-36 size-12",
     src: "resume.png",
     className: "flex-row-reverse",
   },
@@ -154,7 +154,7 @@ export const sectionData = [
     heading: "AI Interviews",
     para: "Shortlisted candidates are invited to participate in AI Interviews, which can be taken at their convenience via mobile or desktop.",
     step: "Step 3",
-    star_position: "bottom-0 left-0 size-20",
+    star_position: "top-0 right-28 size-12",
     src: "interviews.png",
     className: "",
   },
@@ -162,7 +162,7 @@ export const sectionData = [
     heading: "Interview Analysis",
     para: "Every interview includes detailed performance metrics, scores, video recordings, and transcripts to help you make informed decisions. Our AI also flags suspicious or fraudulent activity.",
     step: "Step 4",
-    star_position: "bottom-0 left-0 size-20",
+    star_position: "top-0 left-28 size-12",
     src: "analysis.png",
     className: "flex-row-reverse",
   },
@@ -170,7 +170,7 @@ export const sectionData = [
     heading: "Final Selection",
     para: "Select top candidates based on their resumes and interview scores. You can bookmark them for future reference or mark them as hired directly within the platform.",
     step: "Step 5",
-    star_position: "bottom-0 left-0 size-20",
+    star_position: "top-0 right-28 size-12",
     src: "selection.png",
     className: "",
   },
@@ -179,78 +179,83 @@ export const sectionData = [
 export const featuresData = [
   {
     icon: "two-way.png",
-    content: "One-Way &Two-Way Interviews",
-    para: "Choose from predefined questions or let the AI adapt dynamically during live sessions, creating a personalized interview experience. This ensures objective evaluations while saving time.",
+    content: "One-Way & Two-Way Interviews",
   },
 
   {
     icon: "fake.png",
     content: "Detecting Fake Candidates",
-    para: "With Hire Pro, we detect discrepancies in resumes and interviews, ensuring that the person you interview is the person who eventually joins your team.",
   },
 
   {
     icon: "data.png",
     content: "Data-Driven Evaluation",
-    para: "Access comprehensive reports detailing each candidate’s strengths, areas for improvement, and behavioural traits to help guide your decision-making.",
   },
 
   {
     icon: "interview.png",
     content: "Multiple Interview Types",
-    para: "Customize interviews to meet your specific needs, including: Coding Interviews | Job Interviews | Personality Assessments | Entry and Exit Interviews | Appraisal Interviews | Multilingual Support",
   },
 
   {
     icon: "language.png",
     content: "30+ Language Support",
-    para: "Conduct interviews in over 30 languages, ensuring accessibility for candidates worldwide.",
   },
 
   {
     icon: "recorded.png",
     content: "Recorded Interviews",
-    para: "Save time by reviewing recorded interviews, allowing for consistent assessments and better decision-making.",
   },
 
   {
     icon: "recruiter.png",
     content: "Customizable AI Recruiter",
-    para: "Tailor the AI Recruiter to match your company’s branding. Ask relevant questions that align with the expertise your company seeks.",
   },
 
   {
     icon: "lifetime.png",
     content: "Lifetime Candidate Data Access",
-    para: "Lifelong access to candidate data for future recruitment. This feature helps to create a valuable database for the companies.",
   },
 
   {
     icon: "integration.png",
     content: "Seamless Integration",
-    para: "Integrate Hire Pro seamlessly into your existing HR systems, maximizing the effectiveness of your recruitment process.",
   },
 ];
 
 export const reviewData = [
   {
-    review:
-      "“This app has streamlined our hiring process, helping us quickly identify qualified candidates with AI-driven screening. It saves time and ensures we focus on the right fit for our team.”",
-    author: "Tech Company",
+    review: "“This app has completely transformed our hiring process...”",
+    author: "Tech Innovators Inc.",
     star: 5,
   },
-
   {
     review:
-      "“This app has streamlined our hiring process, helping us quickly identify qualified candidates with AI-driven screening. It saves time and ensures we focus on the right fit for our team.”",
-    author: "Global Consulting Corporation",
+      "“We’ve seen a significant improvement in the quality of candidates...”",
+    author: "Global Consulting Corp.",
     star: 4,
   },
-
   {
     review:
-      "“This app has streamlined our hiring process, helping us quickly identify qualified candidates with AI-driven screening. It saves time and ensures we focus on the right fit for our team.”",
-    author: "Accounting Firm",
+      "“The app’s ability to filter out unqualified candidates has been a game-changer...”",
+    author: "Future Solutions LLC",
+    star: 5,
+  },
+  {
+    review: "“We’ve reduced our hiring time by 40% thanks to this app...”",
+    author: "Bright Accounting Firm",
+    star: 5,
+  },
+  {
+    review:
+      "“The AI-driven insights have helped us make better hiring decisions...”",
+    author: "NextGen Tech",
+    star: 5,
+  },
+  {
+    review:
+      "“This app has made our hiring process more efficient and less stressful...”",
+    author: "Innovate Solutions",
     star: 5,
   },
 ];
